@@ -5,10 +5,14 @@ int main()
     int num;
     printf("Enter the number: ");
     scanf("%d", &num);
-    if (num < 0)
+    switch(num < 0)
     {
-        num = -(num);
-        return num;
+        case 1 :
+                num = -(num);
+                break;
+        case 0 :
+                num = -(num);
+                break;
     }
     else
     {
