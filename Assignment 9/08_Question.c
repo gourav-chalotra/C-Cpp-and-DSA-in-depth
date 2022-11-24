@@ -14,11 +14,6 @@ int main()
                 num = -(num);
                 break;
     }
-    else
-    {
-        num = -num;
-        return num;
-    }
     printf("Number after coverting: %d", covertNtoPtoN(num));
     return 0;
 }
