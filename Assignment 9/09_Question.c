@@ -7,6 +7,16 @@ int main()
     printf("Enter the number: ");
     scanf("%d", &num);
 
-    printf("the number is %d", num += 2);
+    switch(num%2)
+    {
+        case 0:
+            num++;
+            break;
+        case 1:
+            num+=2;
+            break;
+    }
+    printf("Number is: %d",num);
+    
     return 0;
 }
