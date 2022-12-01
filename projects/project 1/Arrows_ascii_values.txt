@@ -1,0 +1,6 @@
+arrows Keys ASCII values
+
+77 --> Right arrow Key
+72 --> Up arrow Key
+75 --> Left arrow Key
+80 --> Down arrow key
