@@ -7,27 +7,12 @@ class reversDigit
 public:
     void reversVal(int num)
     {
+        revers_val;
         user_val = num;
-        int num_cp = num;
-        int place = 0;
-        while (num_cp)
-        {
-            place++;
-            num_cp = num_cp - (num_cp % 10);
-            num_cp /= 10;
-        }
-        int i = 1, tens = 1;
-        while (i < place)
-        {
-            tens = tens * 10;
-            i++;
-        }
-        while (num)
+        while (num != 0)
         {
             int digit = num % 10;
-            revers_val = digit * tens + revers_val;
-            num = num - digit;
-            tens = tens/10;
+            revers_val = revers_val * 10 + digit;
             num /= 10;
         }
     }
