@@ -1,37 +1,37 @@
-// 10. Create a Distance class having 2 instance variable feet and inches. Also create default
-// constructor and parameterized constructor takes 2 variables . Now overload () function call
-// operator that takes 3 arguments a , b and c and set feet = a + c + 5 and inches = a+b + 15
+// 11. Create a class Marks that have one member variable marks and one member function
+// that will print marks. We know that we can access member functions using (.) dot operator. Now
+// you need to overload (->) arrow operator to access that function
 #include <iostream>
 using namespace std;
-class Distance
+class Marks
 {
-    int feet, inches;
 
 public:
-    Distance()
+    int x;
+    Marks()
     {
     }
-    Distance(int feet, int inch)
+    Marks(int x)
     {
-        this->feet = feet;
-        this->inches = inch;
+        this->x = x;
     }
     void operator()(int a, int b, int c)
     {
-        feet = a + c + 5;
-        inches = a + b + 15;
+        x = a + c + 5;
     }
-
-    void display()
+    Marks *operator->()
     {
-        cout << "feet: " << feet << endl;
-        cout << "inches: " << inches << endl;
+        return this;
+    }
+    void printMarks()
+    {
+        cout << "value: " << x << endl;
     }
 };
 int main()
 {
-    Distance a(3, 4);
-    a.display();
-    a(1,2,3);
-    a.display();
+    Marks a(3);
+    // a(1, 2, 3);
+    cout << a->x << endl;
+    a->printMarks();
 }
