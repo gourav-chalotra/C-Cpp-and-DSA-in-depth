@@ -20,7 +20,7 @@ class Integer
 int main()
 {
     Integer i(3);
-    int a = i;
+    int a = int(i);
     cout << a;
     return 0;
 }
